@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengenalan ReactJS</title>
+    <!-- dua file pustaka ReactJS -->
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      /* ReactDOM.render(
+        React.createElement(
+          'div',
+          {},
+          React.createElement(
+            'h1',
+            { style: { color: 'red' } },
+            'Hello World!'
+          ),
+          React.createElement('p', {}, 'Lorem ipsum sit dolor amet!')
+        ),
+        document.getElementById('root')
+      ); */
+      const cE = React.createElement;
+      ReactDOM.render(
+        cE(
+          'div',
+          {},
+          cE('h1', { style: { color: 'red' } }, 'Hello World!'),
+          cE('p', {}, 'Lorem ipsum sit dolor amet!')
+        ),
+        document.getElementById('root')
+      );
+      // ReactDOM.render perintah untuk menampilkan param1 ke lokasi yang ditunjuk oleh param2
+      // Fungsi React.createElement digunakan untuk menggenerate kode HTML yang kemudian bisa dirender ke halaman web
+    </script>
+  </body>
+</html>
